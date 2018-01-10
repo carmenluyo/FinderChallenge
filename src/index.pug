@@ -1,0 +1,94 @@
+doctype html
+html(lang="es")
+    head
+        title Finder challenge
+        meta(charset="utf-8")
+        meta(viewport="width=device-width, initial-scale=1.0")
+        link(href="https://fonts.googleapis.com/css?family=Proxima+Nova", rel="stylesheet", type="text/css")
+        link(href="/styles/awesomplete.css")
+        link(href="/vendor/pure/pure-min.css", rel="stylesheet")
+        link(href="/styles/index.css", rel="stylesheet")
+
+    body
+        .app.pure-g
+            header.pure-u-1.header-wrapper
+                h1.logo Finder challenge!
+                include blocks/search-form
+                .cnt-search
+            div.pop-save
+                h3 Titulo De Busqueda
+                input.edit-tittle-save
+                button.pop-save-btn Guardar
+            aside.filters.pure-u-1-4
+                .filters-box
+                    h2  busquedas guardadas
+                    ul#save-ul.list-items 
+                        li 
+                            a(href="") terror puro
+                            //- div.list-items-opt
+                            //-     span editar
+                            //-     span eliminar
+                        li 
+                            a(href="") search drama
+                        li 
+                            a(href="") comedias en ingles
+                .filters-box
+                    h2  categorias
+                    ul.list-items 
+                        li 
+                            a(href="") todos
+                        li 
+                            a(href="") terror
+                        li 
+                            a(href="") comedia lorem
+                        li
+                            a(href="") drama  
+                .filters-box
+                    h2  idioma
+                    ul.list-items 
+                        li 
+                            a(href="") todos
+                        li 
+                            a(href="") ingles
+                        li 
+                            a(href="") español
+                        li
+                            a(href="") portugues
+                .filters-box
+                    h2  publicacion
+                    ul.list-items 
+                        li 
+                            a(href="") todos
+                        li 
+                            a(href="") hoy
+                        li 
+                            a(href="") hace una semana
+                        li 
+                            a(href="") hace un mes
+                        li 
+                            a(href="") hace un año
+                .filters-box
+                    h2  presentacion
+                    ul.list-items 
+                        li 
+                            a(href="") impreso
+                        li 
+                            a(href="") digital
+                        li 
+                            a(href="") impreso y digital
+            #current_page(type="hidden") 
+            #show_per_page(type="hidden")
+            content.pure-u-3-4
+                #gr-items-books
+                #page_navigation
+            footer.pure-u-1
+
+        //- third party libraries
+        script(src="/vendor/underscore/underscore-min.js")
+
+        //- app scripts self
+        script(src="/scripts/jquery-3.1.1.min.js")
+        script(src="/scripts/awesomplete.min.js")
+        script(src="/scripts/global.js")
+        script(src="/scripts/search-form.js")
+        script(src="/scripts/app.js")
